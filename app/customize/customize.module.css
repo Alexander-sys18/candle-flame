@@ -1,0 +1,505 @@
+.customizePage {
+  padding-top: 100px;
+  padding-bottom: 3rem;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.pageDescription {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: var(--gray-600);
+}
+
+.progressContainer {
+  margin-bottom: 3rem;
+}
+
+.progressBar {
+  height: 0.5rem;
+  background-color: var(--gray-200);
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.progressSteps {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progressStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+
+.stepNumber {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-200);
+  color: var(--gray-600);
+  border-radius: 9999px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.stepLabel {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  transition: color 0.3s ease;
+}
+
+.progressStep.active .stepNumber {
+  background-color: var(--primary);
+  color: white;
+}
+
+.progressStep.active .stepLabel {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.stepContent {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stepTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stepDescription {
+  color: var(--gray-600);
+  margin-bottom: 2rem;
+}
+
+/* Color Selection */
+.colorGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.colorOption {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid var(--gray-200);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.colorOption:hover {
+  border-color: var(--gray-400);
+}
+
+.colorOption.selected {
+  border-color: var(--primary);
+  background-color: rgba(152, 1, 1, 0.05);
+}
+
+.colorSwatch {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.colorName {
+  font-weight: 600;
+}
+
+/* Aroma Selection */
+.aromaGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.aromaOption {
+  padding: 1.5rem;
+  border: 2px solid var(--gray-200);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.aromaOption:hover {
+  border-color: var(--gray-400);
+}
+
+.aromaOption.selected {
+  border-color: var(--primary);
+  background-color: rgba(152, 1, 1, 0.05);
+}
+
+.aromaName {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.aromaDescription {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+/* Container Selection */
+.containerGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.containerOption {
+  border: 2px solid var(--gray-200);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.containerOption:hover {
+  border-color: var(--gray-400);
+  transform: translateY(-5px);
+}
+
+.containerOption.selected {
+  border-color: var(--primary);
+  background-color: rgba(152, 1, 1, 0.05);
+}
+
+.containerImage {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-100);
+}
+
+.containerImg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.containerName {
+  padding: 1rem 1rem 0.5rem;
+  font-size: 1.125rem;
+}
+
+.containerPrice {
+  padding: 0 1rem 1rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Message Customization */
+.messageContainer {
+  margin-bottom: 1rem;
+}
+
+.messageInput {
+  width: 100%;
+  min-height: 150px;
+  padding: 1rem;
+  border: 2px solid var(--gray-200);
+  border-radius: 0.5rem;
+  resize: vertical;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.messageInput:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.characterCount {
+  margin-top: 0.5rem;
+  text-align: right;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+/* Summary */
+.summaryContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.summaryImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.candlePreview {
+  width: 200px;
+  height: 300px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.summaryDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.summaryTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.summaryLabel {
+  font-weight: 600;
+}
+
+.summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--gray-300);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.quantityContainer {
+  margin: 2rem 0;
+}
+
+.quantityLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantityButton {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-100);
+  border: 1px solid var(--gray-300);
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quantityButton:hover:not(:disabled) {
+  background-color: var(--gray-200);
+}
+
+.quantityButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantityInput {
+  width: 3rem;
+  height: 2.5rem;
+  text-align: center;
+  border: 1px solid var(--gray-300);
+  border-radius: 0.25rem;
+}
+
+.addToCartButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.875rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addToCartButton:hover:not(:disabled) {
+  background-color: var(--dark-brown);
+}
+
+.addToCartButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.addToCartButton.loading {
+  background-color: var(--dark-brown);
+}
+
+.spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Navigation Buttons */
+.navigationButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.backButton {
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  color: var(--gray-700);
+  border: 1px solid var(--gray-300);
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.backButton:hover {
+  background-color: var(--gray-100);
+}
+
+.nextButton {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nextButton:hover {
+  background-color: var(--dark-brown);
+}
+
+/* Notification */
+.notification {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 100;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.notificationIcon {
+  flex-shrink: 0;
+}
+
+.notificationContent {
+  flex: 1;
+}
+
+.notificationTitle {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.notificationMessage {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+  .colorGrid,
+  .aromaGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .containerGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .summaryContainer {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .stepLabel {
+    display: none;
+  }
+
+  .progressStep {
+    width: auto;
+  }
+}
